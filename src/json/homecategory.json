@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "womens",
+        "imageUri": "https://i.ibb.co/ZmNvj06/women-fashion.jpg",
+        "titleFirst": "Womens ",
+        "titleSecond": "Summer Fashions",
+        "subTitle":"Specials!"
+      },
+      {
+        "id": 2,
+        "name": "mens",
+        "imageUri": "https://i.ibb.co/PGDc8Db/men-fashion.jpg",
+        "titleFirst": "Mens",
+        "titleSecond": "Fashion",
+        "subTitle":"Latest Trends!"
+      },
+      {
+        "id": 3,
+        "name": "kids",
+        "imageUri": "https://i.ibb.co/ysKsfnc/kids-fashion.jpg",
+        "titleFirst": "Kids",
+        "titleSecond": "Fashion",
+        "subTitle":"Kids fashions!!"
+      },
+      {
+        "id":4,
+        "name": "Accessories",
+        "imageUri":"https://i.ibb.co/ysKsfnc/kids-fashion.jpg",
+        "titleFirst":"Accessories",
+        "titleSecond": "Latest Trends",
+        "subTitle":"Specials!"
+      }
+]
