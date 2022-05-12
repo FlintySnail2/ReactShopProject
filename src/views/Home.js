@@ -12,7 +12,7 @@ class Home extends Component{
                {
                    HOMECATEGORIES.map((item,index)=>{
                        return(
-                           <HomeCategory titleFirst={item.titleFirst} 
+                           <HomeCategory  key={index} titleFirst={item.titleFirst} 
                                         titleSecond={item.titleSecond}
                                         subTitle={item.subTitle} 
                                         imageUri={item.imageUri}
