@@ -2,7 +2,7 @@
     {
       "id": 100,
       "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "name": "Fancy Watch",
       "priceOne": 180,
       "priceTwo": "$120"
       
@@ -10,50 +10,50 @@
     {
       "id": 101,
       "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "name": "Pick Watch",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 102,
       "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "name": "Technical",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 103,
       "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "name": "Minimal",
       "priceOne": 280,
       "priceTwo": null
     },
     {
       "id": 104,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/zhSBt3N/watch7.webp",
+      "name": "Vintage",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 105,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/5swwHxJ/watch6.webp",
+      "name": "All Metal",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 106,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/2tbsDdP/watch5.webp",
+      "name": "prestige",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 107,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/zbvq29g/watch8.webp",
+      "name": "Smart Watch",
       "priceOne": 280,
       "priceTwo": null
     }

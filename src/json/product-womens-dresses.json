@@ -1,59 +1,59 @@
 [
     {
       "id": 100,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Suit",
+      "imageUri": "https://i.ibb.co/g3ZSzXN/Prom-Dress.webp",
+      "name": "Prom Dress",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 101,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Suit",
+      "imageUri": "https://i.ibb.co/mHj5kYH/Short-Dress.webp",
+      "name": "Short Dress",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 102,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Suit",
+      "imageUri": "https://i.ibb.co/WcRHSwg/mermaid-Dress.webp",
+      "name": "Mermaid Dress",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 103,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Suit",
+      "imageUri": "https://i.ibb.co/6mM0FXH/Formla-Dress.webp",
+      "name": "Formal Dress",
       "priceOne": 280,
       "priceTwo": null
     },
     {
       "id": 104,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Suit",
+      "imageUri": "https://i.ibb.co/wzQdFWX/Flower-Dress.webp",
+      "name": "Flower Dress",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 105,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Suit",
+      "imageUri": "https://i.ibb.co/pj40CsM/couture-Dress.webp",
+      "name": "Couture Dress",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 106,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Suit",
+      "imageUri": "https://i.ibb.co/cwLZc6y/Ball-Room-Dress.webp",
+      "name": "Ballroom Dress",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 107,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Suit",
+      "imageUri": "https://i.ibb.co/5MvtsZj/Cocktail-Dress.webp",
+      "name": "Cocktail Dress",
       "priceOne": 280,
       "priceTwo": null
     }

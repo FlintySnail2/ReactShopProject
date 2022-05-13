@@ -1,59 +1,59 @@
 [
     {
       "id": 100,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/RTccq8x/SNake-Heels.webp",
+      "name": "Snake Heels",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 101,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/ZgkCWkZ/SlipOn.webp",
+      "name": "Slip On",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 102,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/MSGqg0Z/Heels.webp",
+      "name": "Heels",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 103,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/sFmmGD8/Fancy-Shoes.webp",
+      "name": "Fancy Shoes",
       "priceOne": 280,
       "priceTwo": null
     },
     {
       "id": 104,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/m0PsvSr/Casual.webp",
+      "name": "Casual",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 105,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/W3gmBtM/BowTie.webp",
+      "name": "Bowtie Shoes",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 106,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/7QTpQZH/Winter-Boots.webp",
+      "name": "Winter Boots",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 107,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/8Xxhdhv/Walking-Shoes.webp",
+      "name": "Walking Shoes",
       "priceOne": 280,
       "priceTwo": null
     }

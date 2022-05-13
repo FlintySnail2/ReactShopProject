@@ -1,59 +1,59 @@
 [
     {
       "id": 100,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/SPKpHxP/Army-Boots.webp",
+      "name": "Army Boots",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 101,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/nR9k7KY/pointy-Shoes.webp",
+      "name": "Pointy Shoes",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 102,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/hHWxTwR/loafers.webp",
+      "name": "Loafers",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 103,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/Jkv132h/formal.webp",
+      "name": "Formal Shoes",
       "priceOne": 280,
       "priceTwo": null
     },
     {
       "id": 104,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/BKN62xr/Work-Boots.webp",
+      "name": "Work Boots",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 105,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/x26TtQn/Casusal.webp",
+      "name": "Casual Shoes",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 106,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/8KkG55t/Runners.webp",
+      "name": "Runners",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 107,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/6ZCKf5G/Sneakers.webp",
+      "name": "Sneakers",
       "priceOne": 280,
       "priceTwo": null
     }

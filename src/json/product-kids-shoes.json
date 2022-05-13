@@ -1,59 +1,59 @@
 [
     {
       "id": 100,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/s6n9VRK/Sneakers.webp",
+      "name": "Sneakers",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 101,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/TbbwH5G/Thongs.webp",
+      "name": "Thongs",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 102,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/C70jGzL/Slippers.webp",
+      "name": "Dinosaur Shoes",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 103,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/Fmgmdhd/Schoolshoes.webp",
+      "name": "School Shoes",
       "priceOne": 280,
       "priceTwo": null
     },
     {
       "id": 104,
-      "imageUri": "https://i.ibb.co/mtn642f/watch1.jpg",
-      "name": "Festive Shoes",
+      "imageUri": "https://i.ibb.co/QfdZv1R/Kids-Sandles.webp",
+      "name": "Sandles",
       "priceOne": 180,
       "priceTwo": "$120"
       
     },
     {
       "id": 105,
-      "imageUri": "https://i.ibb.co/MnW6Wq5/watch2.jpg",
-      "name": "Maxi Shoes",
+      "imageUri": "https://i.ibb.co/0htH2rN/GumBoots.webp",
+      "name": "Gumboots",
       "priceOne": 180,
       "priceTwo": null
     },
     {
       "id": 106,
-      "imageUri": "https://i.ibb.co/GQf2ZQn/watch3.jpg",
-      "name": "Frida Shoes",
+      "imageUri": "https://i.ibb.co/jyTdf25/Kids-Runners.webp",
+      "name": "Runners",
       "priceOne": 80,
       "priceTwo": "$100"
     },
     {
       "id": 107,
-      "imageUri": "https://i.ibb.co/DkCDvGj/watch4.jpg",
-      "name": "Multi Coloured Shoes",
+      "imageUri": "https://i.ibb.co/GtB7kFM/Boots.webp",
+      "name": "Boots",
       "priceOne": 280,
       "priceTwo": null
     }

@@ -1,0 +1,61 @@
+[
+    {
+      "id": 100,
+      "imageUri": "https://i.ibb.co/kcR3YwF/beanie.webp",
+      "name": "Beanie",
+      "priceOne": 30,
+      "priceTwo": "$35"
+      
+    },
+    {
+      "id": 101,
+      "imageUri": "https://i.ibb.co/hgwpYD4/Cap.webp",
+      "name": "Cap",
+      "priceOne": 40,
+      "priceTwo": null
+    },
+    {
+      "id": 102,
+      "imageUri": "https://i.ibb.co/GPT2w9T/balaclava.webp",
+      "name": "Balaclava",
+      "priceOne": 30,
+      "priceTwo": "$25"
+    },
+    {
+      "id": 103,
+      "imageUri": "https://i.ibb.co/8dknDTw/TopHat.webp",
+      "name": "Top Hat",
+      "priceOne": 110,
+      "priceTwo": null
+    },
+    {
+      "id": 104,
+      "imageUri": "https://i.ibb.co/NCFzvvk/beret.webp",
+      "name": "Beret",
+      "priceOne": 50,
+      "priceTwo": "$75"
+      
+    },
+    {
+      "id": 105,
+      "imageUri": "https://i.ibb.co/X5ygPRc/cowboy-Hat.webp",
+      "name": "Cowboy Hat",
+      "priceOne": 20,
+      "priceTwo": null
+    },
+    {
+      "id": 106,
+      "imageUri": "https://i.ibb.co/ctnrkSZ/bearskin-Har.webp",
+      "name": "Bearskin Hat",
+      "priceOne": 40,
+      "priceTwo": "$100"
+    },
+    {
+      "id": 107,
+      "imageUri": "https://i.ibb.co/nM61HxT/fedora.webp",
+      "name": "Fedora",
+      "priceOne": 75,
+      "priceTwo": null
+    }
+
+]

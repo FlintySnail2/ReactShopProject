@@ -1,0 +1,61 @@
+[
+    {
+      "id": 100,
+      "imageUri": "https://i.ibb.co/GT5H9Xn/puff-Pants.webp",
+      "name": "Puff Pants",
+      "priceOne": 180,
+      "priceTwo": "$120"
+      
+    },
+    {
+      "id": 101,
+      "imageUri": "https://i.ibb.co/j44zmbN/Trackies.webp",
+      "name": "Trackies",
+      "priceOne": 180,
+      "priceTwo": null
+    },
+    {
+      "id": 102,
+      "imageUri": "https://i.ibb.co/BgTCWms/Sticker-Pants.webp",
+      "name": "Sticker Pants",
+      "priceOne": 80,
+      "priceTwo": "$100"
+    },
+    {
+      "id": 103,
+      "imageUri": "https://i.ibb.co/dcFVt48/Sleeping-Pants.webp",
+      "name": "Sleeping Pants",
+      "priceOne": 280,
+      "priceTwo": null
+    },
+    {
+      "id": 104,
+      "imageUri": "https://i.ibb.co/WFp7nwh/faux-Leather-Pants.webp",
+      "name": "Faux Leather Pants",
+      "priceOne": 180,
+      "priceTwo": "$120"
+      
+    },
+    {
+      "id": 105,
+      "imageUri": "https://i.ibb.co/HD0fD03/Chino-jpg.webp",
+      "name": "Chino",
+      "priceOne": 180,
+      "priceTwo": null
+    },
+    {
+      "id": 106,
+      "imageUri": "https://i.ibb.co/dJSVCpD/Butterfly-Pants.webp",
+      "name": "Butterfly Pants",
+      "priceOne": 80,
+      "priceTwo": "$100"
+    },
+    {
+      "id": 107,
+      "imageUri": "https://i.ibb.co/gw2b2xf/Camo-Pants.webp",
+      "name": "Army Pants",
+      "priceOne": 280,
+      "priceTwo": null
+    }
+
+]

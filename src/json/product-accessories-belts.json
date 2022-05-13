@@ -1,3 +1,61 @@
-{
+[
+    {
+      "id": 100,
+      "imageUri": "https://i.ibb.co/Gxcsn3c/Formal-Belt.webp",
+      "name": "Formal Belts",
+      "priceOne": 125,
+      "priceTwo": "$115"
+      
+    },
+    {
+      "id": 101,
+      "imageUri": "https://i.ibb.co/k5QMCzT/casual-Belt.webp",
+      "name": "Casual Belts",
+      "priceOne": 40,
+      "priceTwo": null
+    },
+    {
+      "id": 102,
+      "imageUri": "https://i.ibb.co/9hCH2R6/Vinyl-Belt.webp",
+      "name": "Vinyl Belts",
+      "priceOne": 15,
+      "priceTwo": "$25"
+    },
+    {
+      "id": 103,
+      "imageUri": "https://i.ibb.co/r03tNzH/Leather-Belt.webp",
+      "name": "Leather Belts",
+      "priceOne": 110,
+      "priceTwo": null
+    },
+    {
+      "id": 104,
+      "imageUri": "https://i.ibb.co/yNQDtkb/Horse-Shoe-Belt.webp",
+      "name": "Horseshoe Belt",
+      "priceOne": 50,
+      "priceTwo": "$75"
+      
+    },
+    {
+      "id": 105,
+      "imageUri": "https://i.ibb.co/s6SrHXB/Miltary-Belt.jpg",
+      "name": "Military Belt",
+      "priceOne": 20,
+      "priceTwo": null
+    },
+    {
+      "id": 106,
+      "imageUri": "https://i.ibb.co/6bF4Mmr/Braided-Belt.webp",
+      "name": "Braided Belt",
+      "priceOne": 40,
+      "priceTwo": "$100"
+    },
+    {
+      "id": 107,
+      "imageUri": "https://i.ibb.co/GQNJNSk/bowBelt.webp",
+      "name": "Bow Belt",
+      "priceOne": 75,
+      "priceTwo": null
+    }
 
-}
+]
