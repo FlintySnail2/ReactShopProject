@@ -103,7 +103,7 @@ class Category extends Component{
         const {categoryName}=this.props.route.params;
         return(
             <View>
-               <Text>This is category screen {categoryName}</Text>
+               {/* <Text>This is category screen {categoryName}</Text> */}
 
                <View style={{backgroundColor:'grey',color:'black',paddingTop:10,paddingBottom:10}}>
                     <View style={{flexDirection:'row',alignItems:'center'}}>

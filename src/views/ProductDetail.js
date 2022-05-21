@@ -1,18 +1,28 @@
 import React,{Component} from "react";
-import {View,Text,Image,Dimensions} from "react-native";
+import {View,Text,Image,Dimensions, TouchableOpacity} from "react-native";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import Icon from '@expo/vector-icons/Ionicons';
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const {width}=Dimensions.get("window");
+import {store, addToCart} from '../components/redux_shop';
+import {connect} from 'react-redux';
 
 class ProductDetail extends Component{
     render(){
+        const{id,name,imageUri,priceOne,priceTwo}= this.props.route.params;
+        const item={
+            id:id,
+            name:name,
+            priceOne:priceOne,
+            priceTwo:priceTwo,
+            imageUri:imageUri,
+            qty:1
+        }
 
         console.log(this.props.route.params);
 
-        const{id,name,imageUri,priceOne,priceTwo}= this.props.route.params;
+        
         return(
             <View style={{flex:1}}>
                <View>
@@ -30,18 +40,19 @@ class ProductDetail extends Component{
                   </View>
                   <TouchableOpacity onPress={
                       ()=>{
+                          this.props.addToCart(item);
                           this.props.navigation.navigate("Basket")
                       }
                   }>
-                  <View  style={{width:wp("45%"),paddingTop:10,paddingBottom:10,backgroundColor:'black',color:'white',
-                  borderRadius:2,flexDirection:'row',alignItems:'center'}}>
-                      <View style={{paddingLeft:10,paddingRight:10}}>
-                          <Icon name="md-cart" color="white" size={24}></Icon>
-                      </View>
-                      <View>
-                           <Text style={{color:'white',fontSize:18}}>Add to Cart</Text>
-                      </View>
-                  </View>
+                    <View  style={{width:wp("45%"),paddingTop:10,paddingBottom:10,backgroundColor:'black',color:'white',
+                    borderRadius:2,flexDirection:'row',alignItems:'center'}}>
+                        <View style={{paddingLeft:10,paddingRight:10}}>
+                            <Icon name="md-cart" color="white" size={24}></Icon>
+                        </View>
+                        <View>
+                            <Text style={{color:'white',fontSize:18}}>Add to Cart</Text>
+                        </View>
+                    </View>
                   </TouchableOpacity>
               </View>
               <View style={{paddingLeft:10,paddingRight:10}}>
@@ -70,4 +81,11 @@ class ProductDetail extends Component{
     }
 }
 
-export default ProductDetail;
+//export default ProductDetail;
+
+var mapStateToProps=null;
+var mapDispatchToProps={
+    addToCart
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(ProductDetail);
