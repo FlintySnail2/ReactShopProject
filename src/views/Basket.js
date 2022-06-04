@@ -1,14 +1,13 @@
 import React,{Component} from "react";
-import {View,Text, TouchableOpacity} from "react-native";
-
+import {View,Text, TouchableOpacity, Button} from "react-native";
 import BasketItem from '../components/BasketItem';
-
 import Icon from '@expo/vector-icons/Ionicons';
-
 import BasketTotalList from "../components/BasketTotalList";
-
-import {store,removeWholeCart} from '../components/redux_shop';
+import {store,removeWholeCart,removeFromCart} from '../components/redux_shop';
 import {connect} from 'react-redux';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import { NavigationContainer } from "@react-navigation/native";
+
 
 class Basket extends Component{
 
@@ -37,29 +36,25 @@ class Basket extends Component{
             <View>
                 <View>
                     {
-                        /*
-                    <BasketItem id="100" imageUri="https://i.ibb.co/mtn642f/watch1.jpg" name="Men Watch1"
-                    price="220" qty="1" color="black" size="M">
-                    </BasketItem>
-                    <BasketItem id="101" imageUri="https://i.ibb.co/MnW6Wq5/watch2.jpg" name="Men Watch2"
-                    price="100" qty="1" color="pink" size="M"
-                    ></BasketItem>
-                    */
-
+                        
                             this.state.cartItems.map((item)=>{
                                 return(
                                     <BasketItem id={item.id}
                                                 imageUri={item.imageUri}
                                                 name={item.name}
+                                                
                                                 price={item.priceOne}
                                                 qty={item.qty}>
+                                               <View style={{width:80, height:40}} onPress={()=> this.props.onPress(item)}/>
                                     </BasketItem>
+                                  
                                 )
+                                
                             })
 
-                   }
+                   }   
               </View>
-              <View>
+            <View>
                   <View style={{paddingLeft:10,paddingRight:10}}>
                   <TouchableOpacity onPress={()=>this.props.removeWholeCart()}>
                     <View  style={{paddingTop:10,paddingBottom:10,backgroundColor:'black',
@@ -89,12 +84,11 @@ class Basket extends Component{
                                 <Icon name="md-cart" color="white" size={24}></Icon>
                             </View>
                             <View>
-                                <Text style={{color:'white',fontSize:18}}>Place your order</Text>
+                                <Text style={{color:'white',fontSize:18}} onPress={()=> this.props.navigation.navigate('Home')} >Place your order</Text>
                             </View>
                         </View>
                   </View>
               </View>
-
             </View>
         )
     }
@@ -120,6 +114,13 @@ var mapStateToProps=(state)=>{
 var mapDispatchToProps={
     removeWholeCart
 }
+
+// var mapDispatchToProps = (state)=>{
+//     return{
+//         removeFromCart:(cartItems)=>dispatch({type:'REMOVE_FROM_CART',item:id
+//     })
+//     }
+// }
 
 //export default Basket;
 

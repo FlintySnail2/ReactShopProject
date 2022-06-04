@@ -14,7 +14,7 @@ class Shipping extends Component{
                <ShippingPartner imageUri="https://i.ibb.co/j5JyXsG/logo-2.jpg"
                name="UPS" description="No additional costs using UPS"></ShippingPartner>
                <ShippingPartner imageUri="https://i.ibb.co/SwTjq2Q/logo-3.png"
-               name="FedEX" description="No additional costs using FedEx"></ShippingPartner>
+               name="FedEX EXPRESS" description="Additional $12.99"></ShippingPartner>
             </View>
         )
     }

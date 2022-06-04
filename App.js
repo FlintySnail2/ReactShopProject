@@ -1,101 +1,109 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator, DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
-import {store} from './src/components/redux_shop';
-import { Provider } from 'react-redux';
-
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
 
-var HomeStack =createStackNavigator();
-var HomeDrawerNavigator=createDrawerNavigator();
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator, DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 
-// react-navigation/native
+import Home from "./src/views/Home.js";
+import Category from "./src/views/Category.js";
+import ProductDetail from "./src/views/ProductDetail.js";
+import Basket from "./src/views/Basket.js";
+import Shipping from "./src/views/Shipping.js";
+import Account from "./src/views/Account.js"
+import TermsConditions from './src/views/Terms&Conditions.js';
+import Register from './src/views/Register.js';
 
-//IMPORT VIEWS
-import Home from './src/views/Home' 
-import  Category from './src/views/Category';
-import ProductDetail from './src/views/ProductDetail';
-import Shipping from './src/views/Shipping';
-import Basket from './src/views/Basket';
+import {store} from './src/components/redux_shop';
+import {Provider} from 'react-redux';
 
+let HomeStack=createStackNavigator();
+let HomeDrawerNavigator=createDrawerNavigator();
 
-
-// var DrawNav=createDrawerNavigator();
-// export default function App() {
-//   return (
-// <Provider store={store}>
-//     <NavigationContainer>
-//       <DrawNav.Navigator>
-          
-//         <DrawNav.Screen name="Home" component={Home}/>
-//         <DrawNav.Screen name="Category" component={Category}/>
-//         <DrawNav.Screen name="ProductDetail" component={ProductDetail}/>
-//         <DrawNav.Screen name="Basket" component={Basket}/>
-        
-
-//       </DrawNav.Navigator>
-//     </NavigationContainer>
-//     </Provider>
-  
-//   );
-// }
-
-var HomeDrawerNavigator=createStackNavigator();
-//ADD shipping screen
 export default function App() {
   return (
-<Provider store={store}>
+    <Provider store={store}>
     <NavigationContainer>
-      <HomeDrawerNavigator.Navigator useLegacyImplementation screenOptions={ScreenOptions} drawerStyle={{
-        backgroundColor:'grey', width:240, color:'white'
-      }} drawerContent={DrawerContent}>
-        <HomeDrawerNavigator.Screen name="Home" component={HomeStackScreen} options={{headerShown:false}}/>
-        <HomeDrawerNavigator.Screen name="Basket" component={Basket}/>
-        <HomeDrawerNavigator.Screen name="Shipping" component={Shipping}/>
-      </HomeDrawerNavigator.Navigator>
+      <HomeDrawerNavigator.Navigator  useLegacyImplementation screenOptions={ScreenOptions} drawerStyle={{
+      backgroundColor: 'grey',
+      width: 240,
+      color:'white'
+    }} 
+     drawerContent={DrawerContent}>
+      <HomeDrawerNavigator.Screen name="Home" options={{headerShown:false}} component={HomeStackScreen}/>
+      <HomeDrawerNavigator.Screen name="Account" component={Account}/>
+      <HomeDrawerNavigator.Screen name="Shipping" component={Shipping}/>
+      <HomeDrawerNavigator.Screen name="Terms&Conditions" component={TermsConditions}/>
+    </HomeDrawerNavigator.Navigator>
+   
     </NavigationContainer>
     </Provider>
-  
   );
 }
 
-function DrawerContent(props){
+function HomeStackScreen(){
   return(
-    <DrawerContentScrollView style={{backgroundColor:'gray'}}{...props}>
-      <DrawerItem label="Home" onPress={()=> props.navigation.navigate('Home,',{screen: 'Home'})}/>
-      <DrawerItem label="Shipping" onPress={()=> props.navigation.navigate('Shipping,',{screen: 'Shipping'})}/>
-    </DrawerContentScrollView>
+   <HomeStack.Navigator screenOptions={ScreenOptions}>
+     <HomeStack.Screen name="Home" component={Home}/>
+     <HomeStack.Screen name="Category" component={Category}/>
+     <HomeStack.Screen name="ProductDetail" component={ProductDetail}/>
+     <HomeStack.Screen name="Basket" component={Basket} />
+     <HomeStack.Screen name="Shipping" component={Shipping} />
+     <HomeStack.Screen name="Account" component={Account}/>
+     <HomeStack.Screen name="Register" component={Register}/>
+     <HomeStack.Screen name="TermsConditions" component={TermsConditions}/>
+   </HomeStack.Navigator>
   )
 }
 
 const ScreenOptions=({navigation})=>({
   headerShown:true,
   headerTitleStyle:{
-    color:'white'
+    color:"white"
   },
-  headerLeft:()=>(
-      <Icon name="md-menu" color="white" style={{paddingLeft:15}} size={30} onPress={()=>navigation.openDrawer()} />
-),
-  headerRight:()=>(
-    <Text style={{color:'white', fontSize:20, paddingRight:15}}>Trendz Fashion Store</Text>
+  headerLeft: ()=>(
+     <Icon name="md-menu" style={{paddingLeft:10}} color="white" size={30} onPress={
+       ()=>
+       navigation.openDrawer()
+     }></Icon>
   ),
   headerStyle:{
-    backgroundColor:"black"
-  }
-})
+    backgroundColor: "#009eff"
+  },
+  headerRight: ()=>(
+    <Text style={{color:'white', paddingRight:15, fontSize: 20, fontWeight:'bold'}}>Trendz</Text>
+  )
+ })
 
-function HomeStackScreen(){
+ function DrawerContent(props){
+   return(
+     <DrawerContentScrollView style={{backgroundColor:'gray'}} {...props}>
+       <DrawerItem label="Home" onPress={()=>props.navigation.navigate('Home', {screen: 'Home'})}/>
+       <DrawerItem label="Shipping" onPress={()=>props.navigation.navigate('Shipping', {screen: 'Shipping'})}/>
+       <DrawerItem label="Account" onPress={()=>props.navigation.navigate('Account',{screen: 'Account'})}/>
+       <DrawerItem label="Terms & Conditions" onPress={()=>props.navigation.navigate('Terms&Conditions',{Screen: 'Terms&Conditions'})}/>
+     </DrawerContentScrollView>
+   )
+ }
+
+function HomeDrawerNavigatorScreen(){
   return(
-
-    <HomeStack.Navigator screenOptions={ScreenOptions}>
-      <HomeStack.Screen name="Home" component={Home}/>
-      <HomeStack.Screen name="Category" component={Category}/>
-      <HomeStack.Screen name="ProductDetail" component={ProductDetail}/>
-      <HomeStack.Screen name="Basket" component={Basket}/>
-    </HomeStack.Navigator>
+    <HomeDrawerNavigator.Navigator  useLegacyImplementation screenOptions={ScreenOptions} drawerStyle={{
+      backgroundColor: 'grey',
+      width: 240,
+      color:'white'
+    }} 
+    drawerContentOptions={{
+      activeTintColor: 'white',
+      itemStyle: { marginVertical: 2 ,
+      borderWidth:1, borderColor:'black'}
+    }} drawerContent={DrawerContent}>
+      <HomeDrawerNavigator.Screen name="Home" options={{headerShown:false}} component={HomeStackScreen}/>
+      <HomeDrawerNavigator.Screen name="Shipping" component={Shipping}/>
+      <HomeDrawerNavigator.Screen name="Terms & Conditons" component={Terms&Conditions}/>
+    </HomeDrawerNavigator.Navigator>
   )
 }
 
@@ -107,3 +115,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
