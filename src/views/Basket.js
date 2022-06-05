@@ -111,17 +111,10 @@ var mapStateToProps=(state)=>{
         orderTotal:state.orderTotal
     }
 }
+//var mapStateToProps = null;
+
 var mapDispatchToProps={
-    removeWholeCart
+    removeFromCart
 }
-
-// var mapDispatchToProps = (state)=>{
-//     return{
-//         removeFromCart:(cartItems)=>dispatch({type:'REMOVE_FROM_CART',item:id
-//     })
-//     }
-// }
-
-//export default Basket;
 
 export default connect(mapStateToProps,mapDispatchToProps)(Basket);
