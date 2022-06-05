@@ -1,5 +1,7 @@
 import React,{Component} from "react";
-import {View,Text,Image} from "react-native";
+import {View,Text,Image,TouchableOpacity} from "react-native";
+import {store, removeFromCart} from '../components/redux_shop'
+import { connect } from "react-redux";
 
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
@@ -36,10 +38,33 @@ class BasketItem extends Component{
                      <View>
                         <Text style={{fontSize:24,fontWeight:'bold'}}>${this.state.price}</Text>
                      </View>
+                     <TouchableOpacity onPress={()=>{this.props.removeFromCart(this.state);}}>
+                         <View style={{backgroundColor:'#009eff',
+                                        marginTop:'.5em',
+                                        borderRadius:'5px',
+                                        border:'1px solid #009eff',
+                                        height:30,
+                                        width:100, 
+                                        alignItems:'center',
+                                        justifyContent:'center'
+                                        }}>
+                                           <Text style={{fontSize:12,
+                                                        fontWeight:'bold',
+                                                        color:'white'}}>
+                                               Remove Item
+                                            </Text> 
+                                        </View>                         
+                     </TouchableOpacity>
                </View>
             </View>
         )
     }
 }
 
-export default BasketItem;
+var mapStateToProps=null;
+
+var mapDispatchToProps={
+    removeFromCart
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(BasketItem);

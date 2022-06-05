@@ -2,7 +2,7 @@ import {createStore} from 'redux';
 
 //actions
 const ADD_TO_CART='ADD_TO_CART';
-const REMOVE_FROM_CART='REMOVE_FROM_CART';//we will add this
+const REMOVE_FROM_CART='REMOVE_FROM_CART';
 const REMOVE_WHOLE_CART='REMOVE_WHOLE_CART';
 
 //action creators
@@ -40,23 +40,17 @@ var shop=(state=initialState,action)=>{
            console.log('add item to cart');
            console.log(action.item);
 
-           //checking if the item which we are going to add exists in the cart
+           //CHECKING IF THE ITEM WHICH IS GOING TO BE ADDED EXISTS IN THE CART.
 
            var isItemExists=state.cartItems.some((cartItem=>{
                return cartItem.id==action.item.id
            }));
 
            console.log(isItemExists);
-           // if the item already exists- we just need to prevous quantity of than item by 1
 
            if(isItemExists){
-               /*var item=state.cartItems.find((cartItem)=>{
-                   return cartItem.id==action.item.id
-               });*/
+
                console.log("inside is item exists");
-
-               
-
                var quantity=action.item.qty;
                action.item.qty=quantity+1;
            }
@@ -64,7 +58,6 @@ var shop=(state=initialState,action)=>{
             console.log("inside else  item exists");
                action.item.qty=1;
            }
-
            console.log("action item"+action.item);
 
            return{
@@ -80,12 +73,27 @@ var shop=(state=initialState,action)=>{
                    }).reduce((total,cartItem)=>{
                        return total+cartItem.priceOne*cartItem.qty
                    },0)+action.item.priceOne*action.item.qty
-
            }
+           //IF THE ITEM DOES NOT EXIST  A CART ITEM IS ADDED INTO THE CART ITEMS ARRAY
+        break;
 
+        case REMOVE_FROM_CART:
+        console.log(action.item.id);
 
-           //if the item does not exists- we have to add the item into cartItems array
-            break;
+        return{
+            cartItems:[
+                ...state.cartItems.filter((x)=> x.id !== action.item.id),
+            ],
+            orderTotal:
+            state.cartItems.filter((cartItem)=>{
+                return cartItem.id!=action.item.id
+            }).reduce((total, cartItem)=>{
+                return total + cartItem.priceOne * cartItem.qty
+            }, 0) + action.item.priceOne * action.item.qty
+        }
+
+        break;
+
         case REMOVE_WHOLE_CART:
             //write code to remove whole cart
             console.log("remove whole cart");
@@ -93,12 +101,10 @@ var shop=(state=initialState,action)=>{
                     cartItems:[],
                     orderTotal:0
                 })
-            break;
+        break;
 
-        // case REMOVE_FROM_CART:
-        //     return state.filter(cartItem=>cartItem.id != action.item.id)
-        //   break;  
-        default:
+        
+         default:
             return state;
     }
 }
