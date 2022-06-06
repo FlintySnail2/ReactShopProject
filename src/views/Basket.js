@@ -19,15 +19,24 @@ class Basket extends Component{
         }
     }
 
+    // componentDidUpdate(){
+    //     if(this.state.cartItems && (this.state.cartItems.length!=this.props.length)){
+    //         this.setState({
+    //             cartItems:store.cartItems,
+    //             orderTotal:store.orderTotal
+    //         })
+    //     }
+    // }
+
     componentDidUpdate(){
-        if(this.state.cartItems && (this.state.cartItems.length!=this.props.length)){
+        console.log(JSON.stringify(store));
+        if(this.state.cartItems && (this.state.cartItems.length!=this.props.cartItems.length)){
             this.setState({
-                cartItems:store.cartItems,
-                orderTotal:store.orderTotal
+                cartItems:this.props.cartItems,
+                orderTotal:this.props.orderTotal
             })
         }
     }
-
 
     render(){
         if(this.state.cartItems && this.state.cartItems.length){

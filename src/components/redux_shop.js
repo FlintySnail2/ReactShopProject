@@ -22,10 +22,11 @@ export const removeWholeCart=(item)=>{
 
 export const removeFromCart=(item)=>{
     return{
-        type:REMOVE_FROM_CART,
+        type: REMOVE_FROM_CART,
         item
     }
 }
+
 
 var initialState={
     cartItems:[],
@@ -40,17 +41,23 @@ var shop=(state=initialState,action)=>{
            console.log('add item to cart');
            console.log(action.item);
 
-           //CHECKING IF THE ITEM WHICH IS GOING TO BE ADDED EXISTS IN THE CART.
+           //checking if the item which we are going to add exists in the cart
 
            var isItemExists=state.cartItems.some((cartItem=>{
                return cartItem.id==action.item.id
            }));
 
            console.log(isItemExists);
+           // if the item already exists- we just need to prevous quantity of than item by 1
 
            if(isItemExists){
-
+               /*var item=state.cartItems.find((cartItem)=>{
+                   return cartItem.id==action.item.id
+               });*/
                console.log("inside is item exists");
+
+               
+
                var quantity=action.item.qty;
                action.item.qty=quantity+1;
            }
@@ -58,6 +65,7 @@ var shop=(state=initialState,action)=>{
             console.log("inside else  item exists");
                action.item.qty=1;
            }
+
            console.log("action item"+action.item);
 
            return{
@@ -74,26 +82,10 @@ var shop=(state=initialState,action)=>{
                        return total+cartItem.priceOne*cartItem.qty
                    },0)+action.item.priceOne*action.item.qty
            }
-           //IF THE ITEM DOES NOT EXIST  A CART ITEM IS ADDED INTO THE CART ITEMS ARRAY
-        break;
 
-        case REMOVE_FROM_CART:
-        console.log(action.item.id);
 
-        return{
-            cartItems:[
-                ...state.cartItems.filter((x)=> x.id !== action.item.id),
-            ],
-            orderTotal:
-            state.cartItems.filter((cartItem)=>{
-                return cartItem.id!=action.item.id
-            }).reduce((total, cartItem)=>{
-                return total + cartItem.priceOne * cartItem.qty
-            }, 0) + action.item.priceOne * action.item.qty
-        }
-
-        break;
-
+           //if the item does not exists- we have to add the item into cartItems array
+            break;
         case REMOVE_WHOLE_CART:
             //write code to remove whole cart
             console.log("remove whole cart");
@@ -101,10 +93,26 @@ var shop=(state=initialState,action)=>{
                     cartItems:[],
                     orderTotal:0
                 })
-        break;
+            break;
 
-        
-         default:
+        case REMOVE_FROM_CART:
+            console.log("REMOVE_FROM_CART"+action.item.id + JSON.stringify(action));
+            console.log("REMOVE_FROM_CART2"+action.item.id + JSON.stringify(state.cartItems));
+            return {
+                cartItems:[
+                                   ...state.cartItems.filter((cartItem)=> {
+                return cartItem.id != action.item.id
+                                   }),
+                               ],
+                               orderTotal:state.cartItems.filter((cartItem) =>{
+                                return cartItem.id != action.item.id
+                                               }).reduce((total, cartItem)=>{
+                                return total + cartItem.priceOne + cartItem.qty
+                }, 0)
+            }
+            break;
+
+        default:
             return state;
     }
 }

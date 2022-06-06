@@ -21,6 +21,10 @@ class BasketItem extends Component{
         }
     }
     render(){
+        const item={
+            id:this.props.id,
+            name:this.props.name
+        }
         return(
             <View style={{height: hp("20%"), width:wp("100%"), backgroundColor:'white', 
             flexDirection:'row',marginBottom:10}}>
@@ -38,7 +42,10 @@ class BasketItem extends Component{
                      <View>
                         <Text style={{fontSize:24,fontWeight:'bold'}}>${this.state.price}</Text>
                      </View>
-                     <TouchableOpacity onPress={()=>{this.props.removeFromCart(this.state);}}>
+                     <TouchableOpacity 
+                                onPress={()=>{
+                                this.props.removeFromCart(item);}}>
+
                          <View style={{backgroundColor:'#009eff',
                                         marginTop:'.5em',
                                         borderRadius:'5px',
@@ -61,7 +68,13 @@ class BasketItem extends Component{
     }
 }
 
-var mapStateToProps=null;
+
+var mapStateToProps=(state)=>{
+    return{
+        cartItems:state.cartItems,
+        orderTotaL:state.orderTotaL
+    }
+};
 
 var mapDispatchToProps={
     removeFromCart
